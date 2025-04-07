@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>Supply Chain Overview</h1>
+
+<div id="kpi-container" class="kpi-container">
+    <div class="kpi-card">
+        <span class="kpi-title">Total Revenue</span>
+        <span class="kpi-value" id="total-revenue">--</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Avg. Shipping Cost</span>
+        <span class="kpi-value" id="avg-shipping-cost">--</span>
+    </div>
+     <div class="kpi-card">
+        <span class="kpi-title">Avg. Defect Rate</span>
+        <span class="kpi-value" id="avg-defect-rate">--</span>
+    </div>
+    <div class="kpi-card">
+        <span class="kpi-title">Avg. Lead Time (Customer)</span>
+        <span class="kpi-value" id="avg-lead-time">--</span>
+    </div>
+</div>
+
+<div id="dashboard-grid" class="dashboard-grid">
+
+    <div id="revenue-chart-container" class="chart-container">
+        <h2>Revenue by Product Type</h2>
+        <div id="revenue-chart" class="chart-svg-container"></div>
+         <div class="tooltip" id="tooltip-revenue"></div> </div>
+
+    <div id="defect-chart-container" class="chart-container">
+        <h2>Avg. Defect Rate by Supplier</h2>
+        <div id="defect-chart" class="chart-svg-container"></div>
+         <div class="tooltip" id="tooltip-defect"></div> </div>
+
+    <div id="stock-chart-container" class="chart-container">
+        <h2>Stock Levels vs. Products Sold</h2>
+        <div id="stock-chart" class="chart-svg-container"></div>
+        <div class="tooltip" id="tooltip-stock"></div> </div>
+   
+
+
+    <div id="shipping-cost-container" class="chart-container">
+        <h2>Shipping Cost Distribution by Carrier</h2>
+        <div id="shipping-cost-chart" class="chart-svg-container"></div>
+        <div class="tooltip" id="tooltip-shipping"></div> </div>
+
+    <div id="leadtime-hist-container" class="chart-container">
+        <h2>Customer Lead Time Distribution</h2>
+        <div id="leadtime-hist-chart" class="chart-svg-container"></div>
+         <div class="tooltip" id="tooltip-leadtime"></div> </div>
+
+    <div id="transport-donut-container" class="chart-container">
+        <h2>Transportation Mode Usage</h2>
+        <div id="transport-donut-chart" class="chart-svg-container"></div>
+        <div class="tooltip" id="tooltip-transport"></div> 
+    </div>
+</div> 
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>
